@@ -1,68 +1,150 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*<h1 align = "center"> Welcome to ChitChat**
 
-## Available Scripts
 
-In the project directory, you can run:
+**<h3 align="center">A customizable collaboration environment**
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**<h2 align = "center">
+  <a href="#✅requirements">Requirements</a> •
+  <a href="#💻setup">Setup</a> •
+  <a href="#protecting-your-data">Protecting Data</a> •
+  <a href="#📫 questions-and-concerns">Q's & C's</a> •
+  <a href="#🔧technologies-used">Technologies</a> •
+  <a href="#🐛known-bugs">Known Bugs</a> •  
+  <a href="#❤️contributors">Contributors</a> •
+  <a href="#📘 license">License</a>**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<br>
+<h2 align = "center">
 
-### `npm test`
+**ABOUT**
+  In our global world, many companies search for an efficient way to collaborate with members a world away. Many apps like Zoom or Skype, have attempted to fix that problem, each attaining a solid degree of success. Discord builds off that foundation and is today an example of the best environment in an online collaboration site. ChitChat seeks the build upon that legacy by mimicking the smooth ui and flawless video stream of discord into an app that is more customizable and better suited towards online project collaboration. Users of this app can communicate effectively in a custom environment.  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **✅REQUIREMENTS**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Install [Git v2.62.2+](https://git-scm.com/downloads/)
+* Install [.NET version 3.1 SDK v2.2+](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* Install [Visual Studio Code](https://code.visualstudio.com/)
+<!-- * Install [MySql Workbench](https://www.mysql.com/products/workbench/) -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **🎮User Stories**
 
-### `npm run eject`
+| Spec | Input | Output | Status |
+| :------------- | :------------- | :------------- | :------------- | 
+| As a user I can start a video chat room with another computer |  |   |  |
+| As a user I can start a text chat with another user |  |   |  |
+| As a user I can chat with multiple users at once |  |   |  |
+| As a user I can create a profile with online learning resources |  |   |  |
+| As a user I can create subject related server |  |   |  |
+| As a user I can sign up my user profile to attend that server |  |   |  |
+| As a user I can share my screen|  |   |  |
+| multiple users can share a screen at once|  |   |  |
+| As a user I can customize app ui to my own taste via color, panel organization, or hiding features|  |   |  |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## **💻SETUP**
 
-## Learn More
+copy this url to clone this project to your local system:
+```html
+https://github.com/hubba180/chit_chat
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once copied, select "Clone Repository" from within VSCode & paste the copied link as shown in the image below.
 
-### Code Splitting
+![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone-github2.gif "Cloning from Github within VSCode")
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<br>
 
-### Analyzing the Bundle Size
+With the project open to the root directory, navigate to the production directory with the following command in your terminal.
+```js 
+cd chit_chat
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Then, install the necessary packages with the following command
+```js 
+npm install
+```
 
-### Making a Progressive Web App
+Finally, you can start the program with this command.
+```js 
+npm run 
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<!-- ![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
 
-### Advanced Configuration
+[w-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png "↓ Windows Compatibility Status ↓"
+[l-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/linux-pass-sm.png "↓ Linux Compatibility Status ↓"
+[m-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png "↓ macOS (OSX) Compatibility Status ↓" -->
+## **PROTECTING YOUR DATA**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
 
-### Deployment
+# For ![l-top](https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png)
+```js 
+touch .gitignore 
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+# For ![l-top](https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png)
 
-### `npm run build` fails to minify
+```js 
+ni .gitignore 
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Step 2: commit that .gitignore file (this prevents your sensitive information from being shown to others). **⚠️DO NOT PROCEED UNTIL YOU DO!⚠️**
+
+![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/entity-readme-image.png "Set up instructions")
+
+#### Step 3: **To commit your .gitignore file enter the following commands**
+
+```js
+git add .gitignore
+```
+```js
+git commit -m "protect data"
+```
+
+#### Step 4: **Then, you need to update your username and password in the appsettings.json file.**
+
+_by default these are set to user:root and an empty password. if you are unsure, refer to the settings for your MySqlWorkbench._
+
+![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)
+
+<br>
+
+## **🔧Technologies Used**
+
+_**Written in:** [Visual Studio Code](https://code.visualstudio.com/)_
+
+_**Image work:** [Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_
+
+_**Database Mgmt:** [MySql Workbench](https://www.mysql.com/products/workbench/)_
+
+<br>
+
+
+## **🐛Known Bugs**
+
+_**None as of:** 7/31/2020_
+
+<br>
+
+
+## **❤️The Author**
+
+ [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/img/kyle_hubbard.jpg" width="160px;"/><br /><sub><b>Kyle Hubbard</b></sub>](https://www.linkedin.com/in/k-j-hubbard/)<br />        
+
+
+<br>
+
+## **📘 License**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2020 **_Kyle Hubbard, Stickerslug Inc._**
