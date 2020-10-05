@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./Header"
+import UtilityBar from "./UtilityBar";
+import UtilityScreen from "./UtilityScreen";
 // import PropTypes from "prop-types";
 
 class SiteControl extends React.Component {
@@ -10,8 +12,9 @@ class SiteControl extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <UtilityScreen />
         <Header />
-        <h1>Hello World! This is ChitChat!</h1>
+        <UtilityBar />
       </React.Fragment>
     );
   }
