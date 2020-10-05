@@ -35,15 +35,9 @@
 
 | Spec | Input | Output | Status |
 | :------------- | :------------- | :------------- | :------------- | 
-| As a user I can start a video chat room with another computer |  |   |  |
+| As a user I can sign up for a profile |  |   |  |
 | As a user I can start a text chat with another user |  |   |  |
-| As a user I can chat with multiple users at once |  |   |  |
-| As a user I can create a profile with online learning resources |  |   |  |
-| As a user I can create subject related server |  |   |  |
-| As a user I can sign up my user profile to attend that server |  |   |  |
-| As a user I can share my screen|  |   |  |
-| multiple users can share a screen at once|  |   |  |
-| As a user I can customize app ui to my own taste via color, panel organization, or hiding features|  |   |  |
+
 
 
 

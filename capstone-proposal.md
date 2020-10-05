@@ -10,16 +10,20 @@ In our global world, many companies search for an efficient way to collaborate w
 
 ##### Minimum Viable Product
 (List the absolute minimum features the project requires before it is considered in a pre-alpha state)
- * As a user I can start a video chat room with another computer
+ * As a user I can sign up for a profile
  * As a user I can start a text chat with another user
- * As a user I can chat with multiple users at once
- * As a user I can create a profile with online learning resources
- * As a user I can create subject related server
+
  ##### Stretch Goals
- * As a user I can sign up my user profile to attend that server/ restrict to outside viewers
+ * As a user I can start a group text chat
+ * As a user I can create a restricted bulletin
+ * As a user I can sign up my user profile to attend that bulletin
+ * A profile contains a feed tab that posts bulletins from all bulletins subscribed to
+ * As a user I can start a video chat room with another computer
+ * As a user I can video chat with multiple users at once
  * As a user I can share my screen
  * multiple users can share a screen at once
  * As a user I can customize app ui to my own taste via color, panel organization, or hiding features
+ * As a user I can 
 
 ##### Tools for MVP
 (List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your MVP. Be specific.)
