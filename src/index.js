@@ -5,13 +5,13 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Home from "./components/App";
-import reducer from "./reducers/reducer"
+import rootReducer from "./reducers/index"
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import firebase from "./firebase";
 // import 'firebase/auth';
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 const rrfProps = {
     firebase,
