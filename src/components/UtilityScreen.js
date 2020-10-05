@@ -1,6 +1,6 @@
 import React from 'react';
 
-// returns either chat component, HomeFeed component, or Profile Component
+// returns either chat component or HomeFeed component
 
 function UtilityScreen() {
   return (
