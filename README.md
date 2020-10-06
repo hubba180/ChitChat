@@ -35,7 +35,7 @@
 
 | Spec | Input | Output | Status |
 | :------------- | :------------- | :------------- | :------------- | 
-| As a user I can sign up for a profile |  |   |  |
+| As a user I can sign up for a profile |  |   | True |
 | As a user I can start a text chat with another user |  |   |  |
 
 

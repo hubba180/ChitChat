@@ -37,7 +37,7 @@ class SiteControl extends React.Component {
 
     if ((isLoaded(auth)) && (auth.currentUser != null)) {
 
-      const displayName = auth.displayName;
+      const displayName = firebase.auth().currentUser.displayName;
       console.log(displayName);
 
       currentView = <React.Fragment>

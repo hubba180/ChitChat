@@ -4,6 +4,7 @@ import ContactList from './ContactList'
 // needs to return the Contacts List component and Server List Component
 
 function UtilityBar() {
+  
   return (
     <React.Fragment>
       <ContactList />

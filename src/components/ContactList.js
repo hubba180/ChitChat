@@ -1,12 +1,29 @@
-// houses contact component(s)
+// loops through all contact components
 import React from 'react';
+import Contact from './Contact';
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+import { useSelector } from 'react-redux';
 
 
 function ContactList() {
+  useFirestoreConnect([
+    { collection: 'allUsers' }
+  ])
 
-  return <React.Fragment>
-    <h3>Contact List</h3>
-  </React.Fragment>
+    const allUsers = useSelector(state => state.firestore.ordered.allUsers)
+    if (isLoaded(allUsers)) {
+      return (<React.Fragment>
+        {allUsers.map((user) => {
+            return <Contact name={user.userName} userId={user.userId}/>
+          })}
+      </React.Fragment>);
+    } else {
+      return (
+        <React.Fragment>
+          <h3>Loading...</h3>
+        </React.Fragment>
+      )
+    }
 
 
 }

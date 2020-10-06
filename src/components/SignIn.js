@@ -46,15 +46,6 @@ function SignIn(props) {
       console.log(error.message);
     });
   }
-
-  // const doSignOut = () => {
-  //   firebase.auth().signOut().then(function() {
-  //     console.log("Successfully signed out!");
-  //     props.history.push("/home")
-  //   }).catch(function(error) {
-  //     console.log(error.message);
-  //   });
-  // }
   
   const [ signInView, setSignInView ] = useState(
     <React.Fragment>
@@ -121,8 +112,6 @@ function SignIn(props) {
       <React.Fragment>
         {signInView}
         <button type='button' variant="primary" onClick={doSwitchView}>{buttonText}</button>
-        {/* <h1>Sign Out</h1>
-        <button variant="primary" onClick={doSignOut}>Sign out</button> */}
       </React.Fragment>
     )
 }
