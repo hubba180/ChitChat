@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import Home from "./components/App";
+import App from "./components/App";
 import rootReducer from "./reducers/index"
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import firebase from "./firebase";
-// import 'firebase/auth';
+import 'firebase/auth';
+
+import SignIn from "./components/SignIn";
+
 
 const store = createStore(rootReducer);
 
@@ -26,12 +29,22 @@ const rrfProps = {
 ReactDOM.render(
     <Provider store={store}>
         <ReactReduxFirebaseProvider {...rrfProps}>
-            <Router>
+            {/* <Router>
                 <div>
                     <main>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={App} />
                     </main>
                 </div>
+            </Router> */}
+            <Router >
+                <Switch>
+                    <Route exact path="/">
+                        <SignIn />
+                    </Route>
+                    <Route path="/home">
+                        <App />
+                    </Route>
+                </Switch>
             </Router>
         </ReactReduxFirebaseProvider>
     </Provider>,

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import { connect } from "react-redux";
 import SignIn from "./SignIn";
 import UtilityBar from "./UtilityBar";
 import UtilityScreen from "./UtilityScreen";
@@ -9,7 +10,9 @@ import { withFirestore, isLoaded } from 'react-redux-firebase';
 class SiteControl extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      signedIn: false
+    };
   }
   render() {
     let currentView = null;
@@ -24,7 +27,8 @@ class SiteControl extends React.Component {
     if ((isLoaded(auth)) && (auth.currentUser == null)) {
       return (
         <React.Fragment>
-          <SignIn />
+          <h1>You must sign in.</h1>
+          {/* <SignIn signedIn = {this.state.signedIn}/> */}
         </React.Fragment>
       )
     } 
@@ -41,4 +45,6 @@ class SiteControl extends React.Component {
   }
 }
 
+
+SiteControl = connect()(SiteControl);
 export default withFirestore(SiteControl);

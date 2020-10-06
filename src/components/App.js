@@ -1,22 +1,23 @@
 import React from 'react';
 import SiteControl from './SiteControl';
-import Signin from "./SignIn";
+import SignIn from "./SignIn";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import '../App.css';
 
 function App() {
   return (
     <React.Fragment>
-      <Router>
+      {/* <Router >
           <Switch>
           <Route path="/SignIn">
-            <Signin />
+            <SignIn />
           </Route>
-            <Route path="/">
+            <Route exact path="/">
               <SiteControl />
             </Route>
           </Switch>
-      </Router>
+      </Router> */}
+      <SiteControl />
     </React.Fragment>
   );
 }
