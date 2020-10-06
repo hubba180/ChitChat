@@ -1,8 +1,10 @@
 import firebase from "firebase/app";
 import React, { useState } from "react";
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { withFirestore, useFirestore } from 'react-redux-firebase';
 
 function SignIn(props) {
+  const firestore = useFirestore();
 
   const [ viewSwitch, setViewSwitch ] = useState(true);
   const [ buttonText, setButtonText] = useState("Or, Sign Up!")
@@ -13,13 +15,18 @@ function SignIn(props) {
     const password = event.target.password.value;
     const displayName = event.target.displayName.value;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
-      const user = firebase.auth.currentUser;
-      console.log(user)
+      let user = firebase.auth().currentUser;
+      console.log(user);
+      firestore.collection('allUsers').add({
+        userId: firebase.auth().currentUser.uid,
+        userName: displayName,
+        userEmail: email,
+        online: true
+      })
       if (user != null) {
         user.updateProfile({
           displayName: displayName
         })
-        console.log(user.displayName)
       }
       console.log("successfully signed up!");
       props.history.push("/home")
@@ -120,4 +127,5 @@ function SignIn(props) {
     )
 }
 
+SignIn = withFirestore(SignIn);
 export default withRouter(SignIn)

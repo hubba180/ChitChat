@@ -29,13 +29,6 @@ const rrfProps = {
 ReactDOM.render(
     <Provider store={store}>
         <ReactReduxFirebaseProvider {...rrfProps}>
-            {/* <Router>
-                <div>
-                    <main>
-                        <Route exact path="/" component={App} />
-                    </main>
-                </div>
-            </Router> */}
             <Router >
                 <Switch>
                     <Route exact path="/">
