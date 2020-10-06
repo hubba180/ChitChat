@@ -28,7 +28,6 @@ class SiteControl extends React.Component {
       return (
         <React.Fragment>
           <h1>You must sign in.</h1>
-          {/* <SignIn signedIn = {this.state.signedIn}/> */}
         </React.Fragment>
       )
     } 
