@@ -23,7 +23,6 @@ function SignIn(props) {
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log("Successfully signed in!");
       props.history.push("/home")
-      return <Redirect to='/' />
     }).catch(function(error) {
       console.log(error.message);
     });
