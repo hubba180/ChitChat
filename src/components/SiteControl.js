@@ -13,9 +13,18 @@ class SiteControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signedIn: false
+      signedIn: false,
+      screenView: "home"
     };
   }
+
+  handleSwitchUtilityScreen = (string) => {
+    this.setState({
+      ...this.state,
+      screenView: string
+    })
+  }
+
   render() {
     let currentView = null;
     const auth = this.props.firebase.auth();
@@ -41,9 +50,9 @@ class SiteControl extends React.Component {
       console.log(displayName);
 
       currentView = <React.Fragment>
-      <UtilityScreen />
+      <UtilityScreen screenView={this.state.screenView}/>
       <Header name={displayName}/>
-      <UtilityBar />
+      <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
     </React.Fragment>
     }
 

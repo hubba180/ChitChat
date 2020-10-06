@@ -6,9 +6,14 @@ import { useFirestore } from 'react-redux-firebase';
 function Contact(props) {
   const firestore = useFirestore()
 
-  doCreateChat = (id) => {
+  const doCreateChat = (id) => {
     const user = firebase.auth().currentUser
-    firestore.collection(`${user.uid}-${id}`).add();
+    console.log(user);
+    firestore.collection(`${user.uid}-${id}`).add({
+      type: "initial",
+      description: `${user.displayName} started the chat`
+    });
+    props.onSwitchUtilityScreen("chat");
   }
 
   return (

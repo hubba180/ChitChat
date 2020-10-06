@@ -5,7 +5,7 @@ import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import { useSelector } from 'react-redux';
 
 
-function ContactList() {
+function ContactList(props) {
   useFirestoreConnect([
     { collection: 'allUsers' }
   ])
@@ -14,7 +14,7 @@ function ContactList() {
     if (isLoaded(allUsers)) {
       return (<React.Fragment>
         {allUsers.map((user) => {
-            return <Contact name={user.userName} userId={user.userId}/>
+            return <Contact onSwitchUtilityScreen={props.onSwitchUtilityScreen} name={user.userName} userId={user.userId}/>
           })}
       </React.Fragment>);
     } else {
