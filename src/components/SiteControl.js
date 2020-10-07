@@ -70,7 +70,7 @@ class SiteControl extends React.Component {
       const displayName = firebase.auth().currentUser.displayName;
 
       currentView = <React.Fragment>
-      <UtilityScreen screenView={this.state.screenView} chat={this.state.currentConvo}/>
+      <UtilityScreen screenView={this.state.screenView} chat={this.state.currentConvo} chatName={this.state.chatName}/>
       <Header name={displayName}/>
       <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
     </React.Fragment>

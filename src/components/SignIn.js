@@ -16,7 +16,6 @@ function SignIn(props) {
     const displayName = event.target.displayName.value;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       let user = firebase.auth().currentUser;
-      console.log(user);
       firestore.collection('allUsers').add({
         userId: firebase.auth().currentUser.uid,
         userName: displayName,
