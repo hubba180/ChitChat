@@ -15,7 +15,7 @@ class SiteControl extends React.Component {
     this.state = {
       signedIn: false,
       screenView: "home",
-      chatId: null
+      chatName: null
     };
   }
 
@@ -26,11 +26,11 @@ class SiteControl extends React.Component {
   //   })
   // }
 
-  handleSwitchUtilityScreen = (string, num) => {
+  handleSwitchUtilityScreen = (string, name) => {
     this.setState({
       ...this.state,
       screenView: string,
-      chatId: num
+      chatName: name
     })
   }
 
@@ -56,10 +56,9 @@ class SiteControl extends React.Component {
     if ((isLoaded(auth)) && (auth.currentUser != null)) {
 
       const displayName = firebase.auth().currentUser.displayName;
-      console.log(displayName);
 
       currentView = <React.Fragment>
-      <UtilityScreen screenView={this.state.screenView} chatIdValue={this.state.chatId}/>
+      <UtilityScreen screenView={this.state.screenView} chatName={this.state.chatName}/>
       <Header name={displayName}/>
       <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
     </React.Fragment>

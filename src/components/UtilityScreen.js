@@ -6,13 +6,11 @@ import HomeFeed from './HomeFeed';
 
 function UtilityScreen(props) {
   if (props.screenView === "chat") {
-    console.log("chat")
     return (
     <React.Fragment>
-      <Chat chatIdValue={props.chatIdValue}/>
+      <Chat chatName={props.chatName}/>
     </React.Fragment>);
   } else if (props.screenView === "home") {
-    console.log("home")
     return (
     <React.Fragment>
       <HomeFeed />
