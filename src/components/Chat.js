@@ -4,25 +4,14 @@ import { useFirestore } from 'react-redux-firebase';
 
 //shows information from chat with another participent and includes input and send button functionality
 
-// function useMessages(dbTable) {
-//   const firestore = useFirestore();
-//   const [messages, setMessages] = useState([])
-//   useEffect(() => {
-//     firestore.collection(`${dbTable}`)
-//       .onSnapshot((snapshot) => {
-//         const newMessages = snapshot.docs.map((doc) => ({
-//           description: doc.data().description,
-//           type: doc.data().type
-//         }))
-
-//         setMessages(newMessages);
-//       })
-//   }, [])
-//   return messages
-// }
 
 const Chat = (props) => {
-  // let conversation = useMessages(props.chatName);
+
+  if (props.chat) {
+    const filteredArray = props.chat.filter((text) => text.type === "message")
+    console.log(filteredArray)
+
+  }
 
   return (
     <React.Fragment>
@@ -31,13 +20,7 @@ const Chat = (props) => {
       })}
     </React.Fragment>
   );
-  // return (
-  //   <React.Fragment>
-  //     {conversation.map((convo) => {
-  //       return <p>{convo.description}</p>
-  //     })}
-  //   </React.Fragment>
-  // );
+
 }
 
 export default Chat
