@@ -2,13 +2,15 @@ import React from 'react';
 import Chat from './Chat';
 import HomeFeed from './HomeFeed';
 
+
 // returns either chat component or HomeFeed component
+
 
 function UtilityScreen(props) {
   if (props.screenView === "chat") {
     return (
     <React.Fragment>
-      <Chat chatName={props.chatName}/>
+      <Chat chat={props.chat}/>
     </React.Fragment>);
   } else if (props.screenView === "home") {
     return (

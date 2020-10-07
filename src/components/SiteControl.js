@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import firebase from "firebase/app";
 import UtilityBar from "./UtilityBar";
 import UtilityScreen from "./UtilityScreen";
-import { withFirestore, isLoaded } from 'react-redux-firebase';
+import { withFirestore, isLoaded, useFirestore } from 'react-redux-firebase';
 import { Link } from 'react-router-dom';
 // import PropTypes from "prop-types";
 
@@ -15,17 +15,31 @@ class SiteControl extends React.Component {
     this.state = {
       signedIn: false,
       screenView: "home",
-      chatName: null
+      chatName: null,
+      currentConvo:  []
     };
   }
 
+  componentDidUpdate() {
+    console.log("update")
+    firebase.firestore().collection(`${this.state.chatName}`)
+      .onSnapshot((snapshot) => {
+        const newMessages = snapshot.docs.map((doc) => ({
+          description: doc.data().description,
+          type: doc.data().type
+        }))
+        this.setState({
+          ...this.state,
+          currentConvo: newMessages
+        })
+      })
+  }
+
   handleSwitchUtilityScreen = (screenSwitch, name) => {
-    console.log(name.toString());
-    console.log(screenSwitch);
     this.setState({
       ...this.state,
       screenView: screenSwitch,
-      chatName: name.toString()
+      chatName: name
     })
   }
 
@@ -53,7 +67,7 @@ class SiteControl extends React.Component {
       const displayName = firebase.auth().currentUser.displayName;
 
       currentView = <React.Fragment>
-      <UtilityScreen screenView={this.state.screenView} chatName={this.state.chatName}/>
+      <UtilityScreen screenView={this.state.screenView} chat={this.state.currentConvo}/>
       <Header name={displayName}/>
       <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
     </React.Fragment>

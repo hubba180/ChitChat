@@ -14,7 +14,7 @@ function Contact(props) {
       type: "initial",
       description: `${user.displayName} started the chat with ${props.name}`
     });
-    props.onSwitchUtilityScreen("chat", dataName);
+    props.onSwitchUtilityScreen("chat", dataName.toString());
     // props.onChangeChatId(id);
   }
 
