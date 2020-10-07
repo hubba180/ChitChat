@@ -19,18 +19,13 @@ class SiteControl extends React.Component {
     };
   }
 
-  // handleSetChatId = (num) => {
-  //   this.setState({
-  //     ...this.state,
-  //     chatId: num
-  //   })
-  // }
-
-  handleSwitchUtilityScreen = (string, name) => {
+  handleSwitchUtilityScreen = (screenSwitch, name) => {
+    console.log(name.toString());
+    console.log(screenSwitch);
     this.setState({
       ...this.state,
-      screenView: string,
-      chatName: name
+      screenView: screenSwitch,
+      chatName: name.toString()
     })
   }
 
@@ -68,6 +63,12 @@ class SiteControl extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    firestore: state.firestore
+  }
+}
 
-SiteControl = connect()(SiteControl);
+
+SiteControl = connect(mapStateToProps)(SiteControl);
 export default withFirestore(SiteControl);
