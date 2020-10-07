@@ -14,14 +14,23 @@ class SiteControl extends React.Component {
     super(props);
     this.state = {
       signedIn: false,
-      screenView: "home"
+      screenView: "home",
+      chatId: null
     };
   }
 
-  handleSwitchUtilityScreen = (string) => {
+  // handleSetChatId = (num) => {
+  //   this.setState({
+  //     ...this.state,
+  //     chatId: num
+  //   })
+  // }
+
+  handleSwitchUtilityScreen = (string, num) => {
     this.setState({
       ...this.state,
-      screenView: string
+      screenView: string,
+      chatId: num
     })
   }
 
@@ -50,7 +59,7 @@ class SiteControl extends React.Component {
       console.log(displayName);
 
       currentView = <React.Fragment>
-      <UtilityScreen screenView={this.state.screenView}/>
+      <UtilityScreen screenView={this.state.screenView} chatIdValue={this.state.chatId}/>
       <Header name={displayName}/>
       <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
     </React.Fragment>

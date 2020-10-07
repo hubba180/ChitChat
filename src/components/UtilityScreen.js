@@ -9,7 +9,7 @@ function UtilityScreen(props) {
     console.log("chat")
     return (
     <React.Fragment>
-      <Chat />
+      <Chat chatIdValue={props.chatIdValue}/>
     </React.Fragment>);
   } else if (props.screenView === "home") {
     console.log("home")
