@@ -20,19 +20,22 @@ class SiteControl extends React.Component {
     };
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     console.log("update")
-    firebase.firestore().collection(`${this.state.chatName}`)
-      .onSnapshot((snapshot) => {
-        const newMessages = snapshot.docs.map((doc) => ({
-          description: doc.data().description,
-          type: doc.data().type
-        }))
-        this.setState({
-          ...this.state,
-          currentConvo: newMessages
+    if (prevState.chatName !== this.state.chatName) {
+      console.log("triggered");
+      firebase.firestore().collection(`${this.state.chatName}`)
+        .onSnapshot((snapshot) => {
+          const newMessages = snapshot.docs.map((doc) => ({
+            description: doc.data().description,
+            type: doc.data().type
+          }))
+          this.setState({
+            ...this.state,
+            currentConvo: newMessages
+          })
         })
-      })
+    }
   }
 
   handleSwitchUtilityScreen = (screenSwitch, name) => {
