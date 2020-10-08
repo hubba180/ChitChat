@@ -22,10 +22,12 @@ const Chat = (props) => {
 
   return (
     <React.Fragment>
-      {filteredArray.map((message) => {
-        console.log(message)
-        return <p>{message.sender}: {message.description}</p>
-      })}
+      <div class="text-chat">
+        {filteredArray.map((message) => {
+          console.log(message)
+          return <p>{message.sender}: {message.description}</p>
+        })}
+      </div>
       <div class="input-block">
         <form onSubmit={handleFormSubmission}>
           <input type="text" name="message"></input>
