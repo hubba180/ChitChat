@@ -154,3 +154,13 @@ button:hover {
   margin-left: 10px;
 } 
 
+.chat-div {
+  height: 100%;
+  width: 100%;
+}
+
+.input-block {
+  text-align: center;
+}
+
+

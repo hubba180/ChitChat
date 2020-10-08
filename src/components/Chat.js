@@ -6,6 +6,7 @@ import { useFirestore } from 'react-redux-firebase';
 
 
 const Chat = (props) => {
+  
   const firestore = useFirestore();
 
   const filteredArray = props.chat.filter((text) => text.type === "message")
@@ -15,17 +16,17 @@ const Chat = (props) => {
     return firestore.collection(`${props.chatName}`).add({
       type: "message",
       description: event.target.message.value,
-      sender: props.currentUser
+      sender: `${props.currentUser}`
     })
   }
 
   return (
     <React.Fragment>
       {filteredArray.map((message) => {
-        console.log(message.sender)
+        console.log(message)
         return <p>{message.sender}: {message.description}</p>
       })}
-      <div>
+      <div class="input-block">
         <form onSubmit={handleFormSubmission}>
           <input type="text" name="message"></input>
           <button type="submit">Send</button>

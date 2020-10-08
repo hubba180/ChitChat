@@ -28,6 +28,7 @@ class SiteControl extends React.Component {
         .onSnapshot((snapshot) => {
           const newMessages = snapshot.docs.map((doc) => ({
             description: doc.data().description,
+            sender: doc.data().sender,
             type: doc.data().type
           }))
           this.setState({

@@ -9,9 +9,6 @@ function ContactList(props) {
   useFirestoreConnect([
     { collection: 'allUsers' }
   ])
-
-  
-
     const allUsers = useSelector(state => state.firestore.ordered.allUsers)
     if (isLoaded(allUsers)) {
       return (<React.Fragment>

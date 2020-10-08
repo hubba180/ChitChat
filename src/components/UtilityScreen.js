@@ -10,7 +10,9 @@ function UtilityScreen(props) {
   if (props.screenView === "chat") {
     return (
     <React.Fragment>
-      <Chat chat={props.chat} chatName={props.chatName} currentUser={props.currentUser}/>
+      <div class="chat-div">
+        <Chat chat={props.chat} chatName={props.chatName} currentUser={props.currentUser}/>
+      </div>
     </React.Fragment>);
   } else if (props.screenView === "home") {
     return (
