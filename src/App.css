@@ -7,6 +7,7 @@
 body {
   font-family: play;
   background: #f9f9f9;
+  
 }
 
 .sign-in {
@@ -16,13 +17,16 @@ body {
   margin-right: auto;
 }
 
-.sign-in button {
+button {
   font-family: play;
   border-radius: 5px;
   background-color: rgb(114, 212, 135);
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.sign-in button:hover {
+button:hover {
   background-color: rgb(42, 189, 74);
 }
 
@@ -34,18 +38,18 @@ body {
   margin-bottom: 5px;
 }
 
-button {
-  padding: 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 .site-control {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(auto, 50px);
+  grid-auto-rows: minmax(auto, 40px);
   grid-template-areas: 
     "bar header header header"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
     "bar screen screen screen"
     "bar screen screen screen"
     "bar screen screen screen"
@@ -64,16 +68,31 @@ button {
   ;
 }
 
-/* .site-control div {
-  display: inline-block;
-} */
-
-.header-inline {
-  display: inline-block;
+.header-title {
+  justify-content: center;
+  margin-left:10px ;
 }
 
 .header-div {
   grid-area: header;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 0px 5px 0px;
+}
+
+.header-div img {
+  height: 30px;
+  width: auto;
+  margin-left: 10px;
+}
+
+.header-div button {
+  margin-left: 20px;
+}
+
+.header-greeting {
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 .utility-bar-div {
@@ -86,8 +105,16 @@ button {
 
 .utility-bar {
   width: 25vw;
-  height: 100vh;
+  height: 100%;
   background: rgb(206, 206, 206);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.utility-bar h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .header-utility-screen div {
@@ -98,18 +125,32 @@ button {
   width: 100%;
   height: 40px;
   text-align: center;
-  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
 }
 
 .contact-block:hover {
   width: 100%;
   height: 40px;
   text-align: center;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
   background: rgb(187, 187, 187);
 }
 
-.contact-block p {
-  margin-top: 10px;
+.contact-block:active {
+  background: rgb(216, 216, 216);
+  box-shadow: 0px 0px 1px 1px;
 }
+
+.contact-block p {
+  margin-left: 1rem;
+}
+
+
+.contact-block img {
+  height: 25px;
+  width: auto;
+  float: left;
+  margin-left: 10px;
+} 
+

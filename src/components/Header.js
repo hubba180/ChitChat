@@ -14,7 +14,9 @@ function Header(props) {
 
   return (
     <React.Fragment>
-      <h3 class="header-inline">Hello {props.name}!</h3>
+      <img src="https://img.icons8.com/dotty/80/000000/radio.png"/>
+      <h3 class="header-inline header-title">ChitChat | </h3>
+      <h3 class="header-inline header-greeting">Hello {props.name}!</h3>
       <button class="header-inline" variant="primary" onClick={doSignOut}>Sign out</button>
     </React.Fragment>
   )

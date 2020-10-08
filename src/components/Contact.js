@@ -21,8 +21,9 @@ function Contact(props) {
   return (
     <React.Fragment>
       <div class="contact-block" onClick={() => doCreateChat(props.userId)}>
+      <img src="https://img.icons8.com/carbon-copy/100/000000/phone-not-being-used.png"/>
         <p>{props.name}</p>
-      </div><br />
+      </div>
     </React.Fragment>
   )
 }

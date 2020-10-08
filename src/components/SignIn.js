@@ -54,7 +54,7 @@ function SignIn(props) {
           <input
             type='text'
             name='signinEmail'
-            placeholder='email' /><br />
+            placeholder='Email' /><br />
           <input
             type='password'
             name='signinPassword'
@@ -74,11 +74,11 @@ function SignIn(props) {
             <input
               type='text'
               name='email'
-              placeholder='email' /><br />
+              placeholder='Email' /><br />
               <input
               type='text'
               name='displayName'
-              placeholder='name' /><br />
+              placeholder='Name' /><br />
             <input
               type='password'
               name='password'
@@ -97,7 +97,7 @@ function SignIn(props) {
           <input
             type='text'
             name='signinEmail'
-            placeholder='email' /><br />
+            placeholder='Email' /><br />
           <input
             type='password'
             name='signinPassword'
