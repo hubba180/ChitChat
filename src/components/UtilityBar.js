@@ -8,7 +8,7 @@ function UtilityBar(props) {
   return (
     <React.Fragment>
       <div class="utility-bar">
-        <ContactList onSwitchUtilityScreen={props.onSwitchUtilityScreen} />
+        <ContactList onSwitchUtilityScreen={props.onSwitchUtilityScreen} currentUser={props.currentUser}/>
       </div>
     </React.Fragment>
   )

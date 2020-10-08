@@ -22,6 +22,7 @@ const Chat = (props) => {
   return (
     <React.Fragment>
       {filteredArray.map((message) => {
+        console.log(message.sender)
         return <p>{message.sender}: {message.description}</p>
       })}
       <div>

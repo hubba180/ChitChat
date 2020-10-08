@@ -72,7 +72,7 @@ class SiteControl extends React.Component {
       currentView = <React.Fragment>
       <div class="site-control">
         <div class="utility-bar-div"> 
-          <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
+          <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} currentUser={displayName}/>
         </div>
 
           <div class="header-div">
