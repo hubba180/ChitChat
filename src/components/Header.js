@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import firebase from "firebase/app";
 
 function Header(props) {
@@ -18,6 +19,8 @@ function Header(props) {
       <h3 class="header-inline header-title">ChitChat | </h3>
       <h3 class="header-inline header-greeting">Hello {props.name}!</h3>
       <button class="header-inline" variant="primary" onClick={doSignOut}>Sign out</button>
+      <div class="home-tab" onClick={() => props.onGoToHome()}><p>HomeFeed</p></div>
+
     </React.Fragment>
   )
 }

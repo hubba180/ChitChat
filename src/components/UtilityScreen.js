@@ -17,7 +17,9 @@ function UtilityScreen(props) {
   } else if (props.screenView === "home") {
     return (
     <React.Fragment>
-      <HomeFeed />
+      <div class="homefeed-div">
+        <HomeFeed />
+      </div>
     </React.Fragment>);
   } else console.log("Error on utility screen")
 }

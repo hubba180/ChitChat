@@ -30,7 +30,7 @@ const Chat = (props) => {
       </div>
       <div class="input-block">
         <form onSubmit={handleFormSubmission}>
-          <input type="text" name="message"></input>
+          <input type="text" name="message" placeholder="Say hello!"></input>
           <button type="submit">Send</button>
         </form>
       </div>

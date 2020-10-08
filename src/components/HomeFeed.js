@@ -2,7 +2,9 @@ import React from 'react';
 
 function HomeFeed() {
   return <React.Fragment>
-    <h3>HomeFeed</h3>
+    <div class="homefeed-div">
+      <h3>HomeFeed! Probably coming soon...</h3>
+    </div>
   </React.Fragment>
 }
 

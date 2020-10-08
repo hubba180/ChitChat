@@ -39,6 +39,13 @@ class SiteControl extends React.Component {
     }
   }
 
+  handleChangeScreenView = () => {
+    this.setState({
+      ...this.state,
+      screenView: "home"
+    })
+  }
+
   handleSwitchUtilityScreen = (screenSwitch, name) => {
     this.setState({
       ...this.state,
@@ -77,7 +84,7 @@ class SiteControl extends React.Component {
         </div>
 
           <div class="header-div">
-            <Header name={displayName}/>
+            <Header name={displayName} onGoToHome={this.handleChangeScreenView}/>
           </div>
           <div class="utility-screen-div">
             <UtilityScreen screenView={this.state.screenView} chat={this.state.currentConvo} chatName={this.state.chatName} currentUser={displayName}/>
