@@ -71,17 +71,17 @@ class SiteControl extends React.Component {
 
       currentView = <React.Fragment>
       <div class="site-control">
-        <div>
+        <div class="utility-bar-div"> 
           <UtilityBar onSwitchUtilityScreen={this.handleSwitchUtilityScreen} />
         </div>
-        <div class="header-utility-screen">
+
           <div class="header-div">
             <Header name={displayName}/>
           </div>
-          <div class="">
+          <div class="utility-screen-div">
             <UtilityScreen screenView={this.state.screenView} chat={this.state.currentConvo} chatName={this.state.chatName} currentUser={displayName}/>
           </div>
-        </div>
+
       </div>
     </React.Fragment>
     }

@@ -40,16 +40,48 @@ button {
   margin-bottom: 5px;
 }
 
-.site-control div {
-  display: inline-block;
+.site-control {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(auto, 50px);
+  grid-template-areas: 
+    "bar header header header"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+    "bar screen screen screen"
+
+
+  ;
 }
+
+/* .site-control div {
+  display: inline-block;
+} */
 
 .header-inline {
   display: inline-block;
 }
 
 .header-div {
+  grid-area: header;
+}
 
+.utility-bar-div {
+  grid-area: bar;
+}
+
+.utility-screen-div {
+  grid-area: screen;
 }
 
 .utility-bar {
