@@ -48,16 +48,17 @@ function SignIn(props) {
   
   const [ signInView, setSignInView ] = useState(
     <React.Fragment>
-      <h1>Sign In</h1>
+      <img src="https://img.icons8.com/dotty/80/000000/radio.png"/><p>Welcome to ChitChat</p>
+      <h1 class="sign-in-header">Sign In</h1><br />
         <form onSubmit={doSignIn}>
           <input
             type='text'
             name='signinEmail'
-            placeholder='email' />
+            placeholder='email' /><br />
           <input
             type='password'
             name='signinPassword'
-            placeholder='Password' />
+            placeholder='Password' /><br />
           <button type='submit' variant="primary">Sign in</button>
         </form>
     </React.Fragment>
@@ -67,20 +68,21 @@ function SignIn(props) {
     if (viewSwitch === true) {
       setSignInView(
         <React.Fragment>
-          <h1>Sign up</h1>
+          <img src="https://img.icons8.com/dotty/80/000000/radio.png"/><p>Welcome to ChitChat</p>
+          <h1 class="sign-in-header">Sign up</h1><br />
           <form onSubmit={doSignUp}>
             <input
               type='text'
               name='email'
-              placeholder='email' />
+              placeholder='email' /><br />
               <input
               type='text'
               name='displayName'
-              placeholder='name' />
+              placeholder='name' /><br />
             <input
               type='password'
               name='password'
-              placeholder='Password' />
+              placeholder='Password' /><br />
             <button type='submit' variant="primary">Sign up</button>
           </form>
         </React.Fragment>)
@@ -89,16 +91,17 @@ function SignIn(props) {
     } else {
       setSignInView(
         <React.Fragment>
-      <h1>Sign In</h1>
+          <img src="https://img.icons8.com/dotty/80/000000/radio.png"/><p>Welcome to ChitChat</p>
+      <h1 class="sign-in-header">Sign In</h1><br />
         <form onSubmit={doSignIn}>
           <input
             type='text'
             name='signinEmail'
-            placeholder='email' />
+            placeholder='email' /><br />
           <input
             type='password'
             name='signinPassword'
-            placeholder='Password' />
+            placeholder='Password' /><br />
           <button type='submit' variant="primary">Sign in</button>
         </form>
       </React.Fragment>)
@@ -109,8 +112,10 @@ function SignIn(props) {
 
   return (
       <React.Fragment>
-        {signInView}
-        <button type='button' variant="primary" onClick={doSwitchView}>{buttonText}</button>
+        <div class="sign-in">
+          {signInView}
+          <button type='button' variant="primary" onClick={doSwitchView}>{buttonText}</button>
+        </div>
       </React.Fragment>
     )
 }

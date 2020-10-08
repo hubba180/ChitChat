@@ -13,6 +13,7 @@ function ContactList(props) {
     const allUsers = useSelector(state => state.firestore.ordered.allUsers)
     if (isLoaded(allUsers)) {
       return (<React.Fragment>
+        <h3>Contacts</h3>
         {allUsers.map((user) => {
             return <Contact onSwitchUtilityScreen={props.onSwitchUtilityScreen} name={user.userName} userId={user.userId}/>
           })}

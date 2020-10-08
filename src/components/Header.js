@@ -14,8 +14,8 @@ function Header(props) {
 
   return (
     <React.Fragment>
-      <h3>Hello {props.name}!</h3>
-      <button variant="primary" onClick={doSignOut}>Sign out</button>
+      <h3 class="header-inline">Hello {props.name}!</h3>
+      <button class="header-inline" variant="primary" onClick={doSignOut}>Sign out</button>
     </React.Fragment>
   )
 }

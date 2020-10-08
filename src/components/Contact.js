@@ -20,9 +20,9 @@ function Contact(props) {
 
   return (
     <React.Fragment>
-      <div onClick={() => doCreateChat(props.userId)}>
+      <div class="contact-block" onClick={() => doCreateChat(props.userId)}>
         <p>{props.name}</p>
-      </div>
+      </div><br />
     </React.Fragment>
   )
 }
