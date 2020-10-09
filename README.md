@@ -1,25 +1,23 @@
 *<h1 align = "center"> Welcome to ChitChat**
 
 
-**<h3 align="center">A customizable collaboration environment**
 
 <br>
 
 **<h2 align = "center">
   <a href="#✅requirements">Requirements</a> •
   <a href="#💻setup">Setup</a> •
-  <a href="#protecting-your-data">Protecting Data</a> •
-  <a href="#📫 questions-and-concerns">Q's & C's</a> •
   <a href="#🔧technologies-used">Technologies</a> •
-  <a href="#🐛known-bugs">Known Bugs</a> •  
-  <a href="#❤️contributors">Contributors</a> •
+  <a href="#known-bugs">Known Bugs</a> •  
+  <a href="#the-author">Author</a> •
   <a href="#📘 license">License</a>**
 
 <br>
 <h2 align = "center">
 
 **ABOUT**
-  In our global world, many companies search for an efficient way to collaborate with members a world away. Many apps like Zoom or Skype, have attempted to fix that problem, each attaining a solid degree of success. Discord builds off that foundation and is today an example of the best environment in an online collaboration site. ChitChat seeks the build upon that legacy by mimicking the smooth ui and flawless video stream of discord into an app that is more customizable and better suited towards online project collaboration. Users of this app can communicate effectively in a custom environment.  
+
+ChitChat is an instant messaging desktop application that allows user to collaborate in real time. 
 
 </p>
 
@@ -27,26 +25,30 @@
 ## **✅REQUIREMENTS**
 
 * Install [Git v2.62.2+](https://git-scm.com/downloads/)
-* Install [.NET version 3.1 SDK v2.2+](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* Install [Node.js](https://nodejs.org/en/download/)
 * Install [Visual Studio Code](https://code.visualstudio.com/)
-<!-- * Install [MySql Workbench](https://www.mysql.com/products/workbench/) -->
 
-## **🎮User Stories**
+## **Description of Structure**
+  Users first come into a sign in landing page where they can choose to either log in or create a new profile. After that, the application redirects to a site control page which consists of several components: a header navigational component, a multifunctional utility screen showing chats and homefeed, and a utility bar which houses all current contacts. From here, a user may easily respond to, review, and initiate real time conversations through their contacts list.
+
+
+  ![site-control-screenshot](./site-control-screenshot.png)
+
+## **User Stories**
 
 | Spec | Input | Output | Status |
 | :------------- | :------------- | :------------- | :------------- | 
 | As a user I can sign up for a profile |  |   | True |
-| As a user I can start a text chat with another user |  |   |  |
-
-
+| As a user I can start a text chat with another user |  |   | True |
+| As a user my text chat will update in real time |  |   | True |
 
 
 
 ## **💻SETUP**
 
-copy this url to clone this project to your local system:
+Copy this url to clone this project to your local system:
 ```html
-https://github.com/hubba180/chit_chat
+https://github.com/hubba180/ChitChat
 ```
 
 <br>
@@ -67,78 +69,60 @@ Then, install the necessary packages with the following command
 npm install
 ```
 
-Finally, you can start the program with this command.
-```js 
-npm run 
-```
-
-<!-- ![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
-
-[w-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png "↓ Windows Compatibility Status ↓"
-[l-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/linux-pass-sm.png "↓ Linux Compatibility Status ↓"
-[m-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png "↓ macOS (OSX) Compatibility Status ↓" -->
-## **PROTECTING YOUR DATA**
-
-#### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
-
-# For ![l-top](https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png)
-```js 
-touch .gitignore 
-```
-
-# For ![l-top](https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png)
-
-```js 
-ni .gitignore 
-```
-
-#### Step 2: commit that .gitignore file (this prevents your sensitive information from being shown to others). **⚠️DO NOT PROCEED UNTIL YOU DO!⚠️**
-
-![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/entity-readme-image.png "Set up instructions")
-
-#### Step 3: **To commit your .gitignore file enter the following commands**
-
+users will need to add their own .env file to the project. Enter this command in the root directory to create a new file.
 ```js
-git add .gitignore
+touch .env
 ```
+
+Now, populate the file in the following format. Note: please insert your credentials within the quotations. 
 ```js
-git commit -m "protect data"
+REACT_APP_FIREBASE_API_KEY = "YOUR-UNIQUE-CREDENTIALS"
+REACT_APP_FIREBASE_AUTH_DOMAIN = "YOUR-PROJECT-NAME.firebaseapp.com"
+REACT_APP_FIREBASE_DATABASE_URL = "https://YOUR-PROJECT-NAME.firebaseio.com"
+REACT_APP_FIREBASE_PROJECT_ID = "YOUR-PROJECT-FIREBASE-PROJECT-ID"
+REACT_APP_FIREBASE_STORAGE_BUCKET = "YOUR-PROJECT-NAME.appspot.com"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = "YOUR-PROJECT-SENDER-ID"
+REACT_APP_FIREBASE_APP_ID = "YOUR-PROJECT-APP-ID"
 ```
 
-#### Step 4: **Then, you need to update your username and password in the appsettings.json file.**
+Next, build the project with the following command. This will take a few minutes
+```js 
+npm run build
+```
 
-_by default these are set to user:root and an empty password. if you are unsure, refer to the settings for your MySqlWorkbench._
+Once the project is built, navigate into the dist folder and double click the file named ```ChitChat Setup 0.1.0``` to start installing the program. Once the program is installed double click the ChitChat desktop icon to start your own local version of the project.
 
-![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)
-
-<br>
 
 ## **🔧Technologies Used**
 
 _**Written in:** [Visual Studio Code](https://code.visualstudio.com/)_
 
-_**Image work:** [Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_
+_**Database Mgmt:** [Firebase/Firestore](https://firebase.google.com/)_
 
-_**Database Mgmt:** [MySql Workbench](https://www.mysql.com/products/workbench/)_
+_**Language:** JavaScript_
 
-<br>
-
-
-## **🐛Known Bugs**
-
-_**None as of:** 7/31/2020_
+_**Other Technologies:** [Electron](https://www.electronjs.org/), [React](https://reactjs.org/)_
 
 <br>
 
 
-## **❤️The Author**
+## **Known Bugs**
+
+_**Messages Display out of order:** 10/9/2020_
+
+_**Input doesn't clear on send:** 10/9/2020_
+
+<br>
+
+
+## **The Author**
 
  [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/img/kyle_hubbard.jpg" width="160px;"/><br /><sub><b>Kyle Hubbard</b></sub>](https://www.linkedin.com/in/k-j-hubbard/)<br />        
 
 
 <br>
 
-## **📘 License**
+## **License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2020 **_Kyle Hubbard, Stickerslug Inc._**
