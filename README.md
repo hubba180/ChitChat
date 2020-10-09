@@ -29,7 +29,7 @@ ChitChat is an instant messaging desktop application that allows user to collabo
 * Install [Visual Studio Code](https://code.visualstudio.com/)
 
 ## **Description of Structure**
-  Users first come into a sign in landing page where they can choose to either log in or create a new profile. After that, the application redirects to a site control page which consists of several components: a header navigational component, a multifunctional utility screen showing chats and homefeed, and a utility bar which houses all current contacts. From here, a user may easily respond to, review, and initiate real time conversations through their contacts list.
+  Users first come into a sign in landing page where they can choose to either log in or create a new profile. After that, the application redirects to a site control page which consists of several components: a header navigational component, a multifunctional utility screen showing chats and homefeed, and a utility bar which houses all current contacts. From here, a user may easily respond to, review, and initiate real time conversations through their contacts list. To initiate a new chat, view an old chat, or continue an ongoing conversation, simply select the desired contact in the utility bar to bring up the chat component in the utility screen. 
 
 
   ![site-control-screenshot](./site-control-screenshot.png)
