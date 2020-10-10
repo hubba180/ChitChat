@@ -74,7 +74,7 @@ users will need to add their own .env file to the project. Enter this command in
 touch .env
 ```
 
-Now, populate the file in the following format. Note: please insert your credentials within the quotations. 
+Now, populate the file in the following format. Note: please insert your credentials within the quotations. These credentials are from firebase, please visit this [link](https://firebase.google.com/docs/firestore/quickstart) for instructions on setting up a firestore database. 
 ```js
 REACT_APP_FIREBASE_API_KEY = "YOUR-UNIQUE-CREDENTIALS"
 REACT_APP_FIREBASE_AUTH_DOMAIN = "YOUR-PROJECT-NAME.firebaseapp.com"
