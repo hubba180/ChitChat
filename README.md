@@ -108,8 +108,6 @@ _**Other Technologies:** [Electron](https://www.electronjs.org/), [React](https:
 
 ## **Known Bugs**
 
-_**Messages Display out of order:** 10/9/2020_
-
 _**Input doesn't clear on send:** 10/9/2020_
 
 <br>
