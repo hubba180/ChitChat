@@ -26,10 +26,12 @@ class SiteControl extends React.Component {
       console.log("triggered");
       firebase.firestore().collection(`${this.state.chatName}`)
         .onSnapshot((snapshot) => {
+          console.log(snapshot);
           const newMessages = snapshot.docs.map((doc) => ({
             description: doc.data().description,
             sender: doc.data().sender,
-            type: doc.data().type
+            type: doc.data().type,
+            timestamp: doc.data().timestamp
           }))
           this.setState({
             ...this.state,

@@ -9,13 +9,12 @@ function Contact(props) {
   const doCreateChat = (id) => {
     const user = firebase.auth().currentUser
     const userVar = [`${user.displayName}`, `${props.name}`]
-    const dataName = userVar.sort()
-    firestore.collection(`${dataName}`).add({
+    const newDataTable = userVar.sort()
+    firestore.collection(`${newDataTable}`).add({
       type: "initial",
       description: `${user.displayName} started the chat with ${props.name}`
     });
-    props.onSwitchUtilityScreen("chat", dataName.toString());
-    // props.onChangeChatId(id);
+    props.onSwitchUtilityScreen("chat", newDataTable.toString());
   }
 
   return (
